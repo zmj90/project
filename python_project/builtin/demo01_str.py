@@ -1,0 +1,12 @@
+comment_string = '#....... Section 3.2.1 Issue #32 .......'
+comment_string.strip('.#! ')
+r1 = b"\u6210\u90fd".decode("unicode_escape")
+r2 = r"\u6210\u90fd".encode().decode("unicode_escape")
+r3 = "\u6210\u90fd".encode().decode()
+r4 = "钟".encode()
+r5 = "\x45".encode()
+print(type(r1), r1)
+print(type(r2), r2)
+print(type(r3), r3)
+print(type(r4), r4)
+print(type(r5), r5)

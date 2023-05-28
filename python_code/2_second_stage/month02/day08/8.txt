@@ -1,0 +1,119 @@
+前情回顾:
+
+1. 聚合操作
+
+   聚合分组: group by
+   聚合筛选: having
+   聚合去重  distinct
+   聚合运算
+
+2. 索引操作
+
+   优点 : 提高查询效率
+   缺点 : 占用空间, 影响一些写操作效率
+
+   适用情况 :　数据量大，经常查询
+
+   create table [tb] (col type...., index index_name(col),unique(col),primary key(col));
+   create index  [index_name] on  tb(col);
+   show index from [tb];
+   desc [tb]
+
+3.  外键约束　
+　　
+　　constraint [外键名称]　
+   foreign key [外键字段]　
+   references 主表（主表主键字段）　
+   [级联动作]
+
+
+   删除外键:  alter table [tb] drop foreign key [外键];
+
+   级联动作 : restrict   cascade   set null
+
+4. 表的关联关系设计
+
+   一对一
+
+   一对多
+
+   多对多
+
+
+练习1: 对应笔记中ER模型图,建立教师,学生,课程三个实体之间的表关系
+
+
+
+练习2: 表关联查询 使用cls 和 interest
+
+     1. 学生对应的兴趣爱好以及兴趣班价格
+     2. 查询所有学生信息,同时标注出那些有什么样的兴趣爱好
+     3. 查询所有兴趣班信息,同时标注有那些学生参加了这些兴趣班
+
+进阶练习:
+
+create table class(cid int primary key auto_increment,
+                  caption char(4) not null);
+
+create table teacher(tid int primary key auto_increment,
+                    tname varchar(32) not null);
+
+create table student(sid int primary key auto_increment,
+                    sname varchar(32) not null,
+                    gender enum('male','female','others') not null default 'male',
+                    class_id int,
+                    foreign key(class_id) references class(cid)
+                    on update cascade
+                    on delete cascade);
+
+create table course(cid int primary key auto_increment,
+                   cname varchar(16) not null,
+                   teacher_id int,
+                   foreign key(teacher_id) references teacher(tid)
+                   on update cascade
+                   on delete cascade);
+
+create table score(sid int primary key auto_increment,
+                  student_id int,
+                  course_id int,
+                  number int(3) not null,
+                  foreign key(student_id) references student(sid)
+                   on update cascade
+                   on delete cascade,
+                   foreign key(course_id) references course(cid)
+                   on update cascade
+                   on delete cascade);
+
+insert into class(caption) values
+('三年二班'),('三年三班'),('三年一班');
+insert into teacher(tname) values
+('波多老师'),('苍老师'),('小泽老师');
+insert into student(sname,gender,class_id) values
+('钢蛋','female',1),('铁锤','female',1),('山炮','male',2),('彪哥','male',3);
+insert into course(cname,teacher_id) values
+('生物',1),('体育',1),('物理',2);
+insert into score(student_id,course_id,number) values
+(1,1,60),(1,2,59),(2,2,100),(3,2,78),(4,3,66);
+
+1. 查询每位老师教授的课程数量
+
+2. 查询学生的信息及学生所在班级信息
+3. 查询各科成绩最高和最低的分数,形式 : 课程ID  最高分  最低分
+4. 查询平均成绩大于85分的所有学生学号,姓名和平均成绩
+5. 查询课程编号为2且课程成绩在80以上的学生学号和姓名
+6. 查询各个课程及相应的选修人数
+
+
+
+作业: 1. 将book数据表拆分  图书表   作家表   出版社表
+         字段自拟  关系自拟
+
+         画出E-R图然后建立表模型
+
+      2. 函数 传入两个学生的ID 得到这两个学生的成绩之和
+         存储过程  传入一个学生的姓名 通过外部的用户变量得到这个学生的成绩
+
+      3. 提高练习
+
+
+

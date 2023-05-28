@@ -1,0 +1,42 @@
+前情回顾:
+1. E-R 模型
+
+2. 表关联查询
+
+   内链接:  tb1  inner join tb2 on 连接条件
+
+   外链接: 左连接   tb1  left join tb2 on 连接条件
+          右链接   tb1  right join tb2 on 连接条件
+
+3.  视图
+    作业 : 简化复杂查询,获取简要数据,结构清晰,操作安全
+
+    create [or replace]  view  [view_name] as [select.....]
+
+    drop view [if exists] [view]
+
+4.函数和存储过程
+  函数 : 有返回值,参数只有一种,多用于查询操作后获取一个值
+  存储过程: 没有返回值,参数类型比较多,多用于执行一系列语句
+
+  delimiter [xx]
+
+  create function func(uid int,...)
+  returns [return_type]
+  begin
+    declare a int;
+    sql....;
+    return ...;
+  end
+
+  create procedure pro(in uid int,...)
+  begin
+    declare a int;
+    sql....;
+  end
+
+  drop  function/procedure [name]
+
+作业:  1. 将数据库部分只是整理
+      2. 云笔记 (有道)
+      3.  前三天半的练习自己不熟练的在做一下

@@ -1,0 +1,7 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Filename,Latency,Encoding,SampleCount,ErrorCount,Hostname,IdleTime,Connect
+1623596697894,516,post,200,OK,httpbin3 1-1,text,true,,885,278,2,2,http://httpbin.org/post,,516,ISO-8859-1,1,0,zmj,0,260
+1623596698411,0,调试取样器,200,OK,httpbin3 1-1,text,true,,388,0,2,2,null,,0,GBK,1,0,zmj,0,0
+1623596698225,504,post,200,OK,httpbin3 1-2,text,true,,885,278,2,2,http://httpbin.org/post,,504,ISO-8859-1,1,0,zmj,0,252
+1623596698729,0,调试取样器,200,OK,httpbin3 1-2,text,true,,388,0,2,2,null,,0,GBK,1,0,zmj,0,0
+1623596698571,505,post,200,OK,httpbin3 1-3,text,true,,885,278,1,1,http://httpbin.org/post,,505,ISO-8859-1,1,0,zmj,0,252
+1623596699076,0,调试取样器,200,OK,httpbin3 1-3,text,true,,388,0,1,1,null,,0,GBK,1,0,zmj,0,0

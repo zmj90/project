@@ -1,0 +1,83 @@
+前情回顾
+
+1. 关于文件
+   文本  二进制
+   字节串
+
+2. 文件操作
+
+    open()    r  w   a   +  b
+
+    read()/write()
+
+    close()
+
+3.  缓冲区
+    flush()
+
+4.  文件偏移量
+    tell()
+    seek()
+
+
+练习2. 在主目录下有若干个文件和目录，需要删除这其中大小不到10字节的普通文件
+
+
+练习3： 正则表达式训练
+
+    大写字母开头单词
+    re.findall("[A-Z][a-z]*",s)
+
+    匹配密码，数字字母下划线，6-12位
+    re.findall("[_0-9a-zA-Z]{6,12}","tarena_666")
+
+    匹配数字 包含 正数  负数  百分数  45  -12   40%
+    re.findall("-?[0-9]+%?","45  -12   40%")
+
+    匹配大写字母开头单词   Hello  I   NBA  MBA
+    re.findall("[A-Z]+[a-z]*","Hello  I   NBA  MBA  you")
+
+
+    匹配书名号及内部的内容
+    re.findall(r"《.+?》","《Mkbll-youji》,《中国历史》,《I 在中国》")
+    ['《Mkbll-youji》', '《中国历史》', '《I 在中国》']
+
+
+    匹配大写字母来头的单词    Hello  I  NBA  iPython（不算）
+    In [10]: re.findall(r'\b[A-Z]+[a-z]*',"Hello  I  NBA hi iPython")
+    Out[10]: ['Hello', 'I', 'NBA']
+
+
+    匹配 IP地址   192.168.4.65  （0-255）
+
+    In [13]: re.search(r'(\d{1,3}\.){3}\d{1,3}',"192.168.4.65").group()
+    Out[13]: '192.168.4.65'
+
+
+    匹配一个18位的身份证号码
+    In [16]: re.search(r'\d{17}(\d|x)',"11008119990326104x").group()
+Out[16]: '11008119990326104x'
+
+
+在线练习： https://c.runoob.com/front-end/854
+         https://tool.oschina.net/regex/
+
+
+作业： 1.元字符搞熟练
+      2.在线练习看看
+      3. 写一个程序，input输入一个设备名称，从文档中提取出这个设备的address is值
+        打印出来
+
+         提示： 每一段之间有空行
+               设备名称是每一段的第一个单词
+               每一段都有address is
+
+
+
+
+
+
+
+
+
+

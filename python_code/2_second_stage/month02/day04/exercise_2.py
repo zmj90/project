@@ -1,0 +1,13 @@
+"""
+练习2. 在主目录下有若干个文件和目录，需要删除这其中大小不到10字节的普通文件
+"""
+
+import os
+
+dir = "/home/tarena/"
+
+file_list = os.listdir(dir)
+
+for file in file_list:
+    if os.path.isfile(dir+file) and os.path.getsize(dir+file) < 10 and file[0] != '.':
+        os.remove(dir+file)

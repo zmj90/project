@@ -1,0 +1,24 @@
+{
+    "data": [
+        {
+            "directors": [
+                "张艺谋"
+            ],
+            "rate": "7.6",
+            "cover_x": 5315,
+            "star": "40",
+            "title": "悬崖之上",
+            "url": "https:\/\/movie.douban.com\/subject\/32493124\/",
+            "casts": [
+                "张译",
+                "于和伟",
+                "秦海璐",
+                "朱亚文",
+                "刘浩存"
+            ],
+            "cover": "https://img2.doubanio.com\/view\/photo\/s_ratio_poster\/public\/p2641614433.jpg",
+            "id": "32493124",
+            "cover_y": 7440
+        }
+    ]
+}
