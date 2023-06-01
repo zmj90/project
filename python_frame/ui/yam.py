@@ -242,6 +242,15 @@ class Key(BasePage):
         except TimeoutException:
             return False
 
+    def wait_ele_invisible(self, by, value) -> None:
+        """
+        等待元素不可见
+        """
+        try:
+            WebDriverWait(self.driver, 6).until_not(ec.visibility_of_element_located((by, value)))
+        except TimeoutException as e:
+            logging.error(e)
+
 
 class YamlHandler:
     def __init__(self):
