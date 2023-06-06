@@ -22,11 +22,14 @@ All Rights Reserved. <class 'str'>
 # 3.9.6 (tags/v3.9.6:db3ff76, Jun 28 2021, 15:26:21) [MSC v.1929 64 bit (AMD64)] <class 'str'>
 
 
-s3 = sys.platform
-print(s3, type(s3))
+# s3 = sys.platform
+# print(s3, type(s3))
 # win32 <class 'str'>
 
 
 # s4 = sys.version_info
 # print(s4, type(s4))
 # sys.version_info(major=3, minor=9, micro=6, releaselevel='final', serial=0) <class 'sys.version_info'>
+
+s5 = sys.stdin.read()
+print(type(s5), s5)
