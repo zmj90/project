@@ -19,7 +19,7 @@ x
 import time
 
 d = {"0": "abc", "1": "def", "2": "ghi", "3": "jkl", "4": "mno", "5": "pqr", "6": "st", "7": "uv", "8": "wx", "9": "yz"}
-s = "0123456789"
+
 
 def fun1(a):
     start = time.time()
@@ -41,5 +41,6 @@ def fun1(a):
     print(f"{start - end:.9f}")
 
 
-if __name__ == 'main':
+if __name__ == '__main__':
+    s = "0123456789"
     fun1(s)

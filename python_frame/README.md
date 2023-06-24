@@ -102,5 +102,10 @@ zwx996578.pth
 	D:\doing\zwx996578_pack
 
 
+python3 -V
+echo $runParam
+pytest test_case/tech_inno/api/test_IdeaManageService || true
+python3 driver/tech_inno/back_cloudtest.py $runParam
+
 ```
 
