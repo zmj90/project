@@ -100,6 +100,14 @@ special.py
 zwx996578.pth
 	# /opt/zwx996578_pack
 	D:\doing\zwx996578_pack
+        
+Python311\Lib\necessity
+
+Python311\Lib\site-packages\special.py
+
+Python311\Lib\site-packages\zwx996578.pth
+
+Python311\zwx996578_pack
 
 
 python3 -V
