@@ -4,6 +4,7 @@
 import logging
 
 from ui.yam import YamlHandler, Key
+from utils.utils import Compare
 
 
 class YamlDriver:
@@ -38,7 +39,7 @@ def perform(key, yam_data):
         if ele.get("log"):
             logging.info(ele.get("log"))
         if r:
-            assert ele["expect"] == r
+            assert getattr(Compare, ele["symbol"])(ele["expect"], r), r
 
 
 def perform_excel(key: Key, data: dict) -> None:

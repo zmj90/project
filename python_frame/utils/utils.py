@@ -355,3 +355,13 @@ def _excel_parse(values):
             step["param"] = j_o
             step["expect"] = v[4]
             yield step
+
+
+class Compare:
+    @staticmethod
+    def equal(left, right):
+        return left == right
+
+    @staticmethod
+    def contain(left, right):
+        return left in right
