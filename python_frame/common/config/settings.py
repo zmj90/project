@@ -7,6 +7,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 URL_HOME = "https://www.douban.com"
 USERNAME, PASSWORD = None, None
 LOGIN = None
+PRODUCT_LINE = "045969"
 
 DB = [
     {

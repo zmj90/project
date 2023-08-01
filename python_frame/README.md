@@ -117,3 +117,11 @@ python3 driver/tech_inno/back_cloudtest.py $runParam
 
 ```
 
+
+
+## 隐私
+
+```python
+# 敏感信息放入数据库 or 服务器
+```
+
