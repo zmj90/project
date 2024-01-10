@@ -125,3 +125,29 @@ python3 driver/tech_inno/back_cloudtest.py $runParam
 # 敏感信息放入数据库 or 服务器
 ```
 
+
+
+```
+框架设计:逻辑层、设计层、数据层
+目录
+data
+info
+resources
+bin
+etc
+usr
+dev
+conf
+lib
+help
+plugins
+doc
+drivers
+logs
+tools
+temp
+share
+bll
+
+```
+

@@ -20,12 +20,12 @@ class ClueCreateJson:
     def __init__(self,
                  permission_set, file_id=None, file_name="", cover_type=5, save_type=1):
         fake_cn = fake()
-        self.title = fake.country() + fake.uuid4()
+        self.title = fake_cn.country() + fake_cn.uuid4()
         self.domainId = VBS_DOMAIN
         if file_id:
             self.fileId = file_id
             self.fileName = file_name
-        self.description = f"<div>{fake.text()}</div>"
+        self.description = f"<div>{fake_cn.text()}</div>"
         self.permissionSet = permission_set  # "公开" or "秘密"
         self.clueType = random.choice(clue_type)
         self.source = random.choice(source)
