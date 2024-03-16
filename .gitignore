@@ -7,23 +7,6 @@ local
 run.py
 failures
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
